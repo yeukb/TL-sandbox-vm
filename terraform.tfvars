@@ -1,0 +1,8 @@
+resource_group_name = "<resource_group_name>"
+location = "<azure_location>"
+adminUsername = "admin"
+adminPassword = "<admin_password>"
+allowed_src_ip = "0.0.0.0/0"
+console_url = "console:8083"
+console_username = "<console_username>"
+console_password = "<console_password>"
