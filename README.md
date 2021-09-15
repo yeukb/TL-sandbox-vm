@@ -1,6 +1,6 @@
 # Prisma Cloud Compute Sandbox Analysis VM
 
-This is to create a VM to perform Prisma Cloud Compute Sandbox Analysis. The twistcli tool will be downloaded from the specified Prisma Cloud Compute Console and placed in /use/local/bin directory.
+This is to create a VM to perform Prisma Cloud Compute Sandbox Analysis. The twistcli tool will be downloaded from the specified Prisma Cloud Compute Console and placed in /use/local/bin directory. Java will also be installed so that this VM can act as a slave to Jenkins.
 
 Reference: https://docs.paloaltonetworks.com/prisma/prisma-cloud/21-08/prisma-cloud-compute-edition-admin/runtime_defense/image_analysis_sandbox.html
 
@@ -8,7 +8,9 @@ Reference: https://docs.paloaltonetworks.com/prisma/prisma-cloud/21-08/prisma-cl
 ## Prequisites:
 1. Terraform v1.0 and above
 
-2. Create a custom role on the Prisma Cloud Compute Console
+2. SSH key pair (RSA)
+
+3. Create a custom role on the Prisma Cloud Compute Console for Sandbox Analysis
     - https://docs.paloaltonetworks.com/prisma/prisma-cloud/21-08/prisma-cloud-compute-edition-admin/runtime_defense/image_analysis_sandbox.html#_setup_the_sandbox_user
     - Under Monitor
         - CI Results: Read
@@ -16,7 +18,7 @@ Reference: https://docs.paloaltonetworks.com/prisma/prisma-cloud/21-08/prisma-cl
     - Under Manage
         - Utilities: Read  (This is to allow download of twistcli tool)
 
-3. Create a user on the Prisma Cloud Compute Console and assign the custom role to the new user
+4. Create a user on the Prisma Cloud Compute Console and assign the custom role to the new user
 
 
 

@@ -4,7 +4,7 @@ variable "location" {}
 
 variable "adminUsername" {}
 
-variable "adminPassword" {}
+variable "ssh_public_key_file" {}
 
 variable "allowed_src_ip" {}
 

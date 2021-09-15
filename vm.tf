@@ -48,9 +48,11 @@ resource "azurerm_linux_virtual_machine" "sandbox" {
   resource_group_name = azurerm_resource_group.main.name
   size                = var.vmSize
 
-  disable_password_authentication = false
   admin_username = var.adminUsername
-  admin_password = var.adminPassword
+  admin_ssh_key {
+    username   = var.adminUsername
+    public_key = file(var.ssh_public_key_file)
+  }
 
   network_interface_ids = [azurerm_network_interface.eth0.id]
 
